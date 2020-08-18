@@ -1,0 +1,30 @@
+server:
+  port: 10080
+
+spring:
+  application:
+    name: blockchain-service
+  profiles:
+    active: default
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: "http://localhost:10081/eureka/"
+    register-with-eureka: true
+    fetch-registry: true
+
+mychain:
+  rest:
+    bizid: <to-be-replaced>
+    cipher-suit: ec
+    rest-url: https://rest.baas.alipay.com
+    access-id: <to-be-replaced>
+    access-secret: access.key
+    default-account: <to-be-replaced>
+    default-account-key: user.key
+    default-account-pwd: <to-be-replaced>
+    read-file-from-ext: false
+    tenantid: <to-be-replaced>
